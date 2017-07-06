@@ -25,9 +25,14 @@ floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
+
+# Some nice programs
 bindsym $mod+d exec $shh j4-dmenu-desktop
 bindsym $win+n exec networkmanager_dmenu
 bindsym $win+f exec firefox
+bindsym $win+o exec okular
+bindsym $win+t exec /home/isaac/Downloads/Telegram/Telegram
+bindsym $win+s exec steam-native
 
 # change focus
 bindsym $mod+j focus left
