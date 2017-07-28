@@ -9,6 +9,7 @@
 export EDITOR=nvim
 
 alias flux='xflux -l 59.9 -g 30.3'
+alias pytest='[[ -n ${VIRTUAL_ENV} ]] && python -m pytest || pytest'
 
 # Setup history
 HISTCONTROL=ignoredups:erasedups

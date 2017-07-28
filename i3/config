@@ -16,9 +16,9 @@ exec $shh pa-applet
 ###############
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec $shh pactl -- set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec $shh pactl -- set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec $shh pactl set-sink-mute 0 toggle # mute sound
 
 # Drag floating windows w/ mouse
 floating_modifier $mod
@@ -28,11 +28,13 @@ bindsym $mod+Shift+q kill
 
 # Some nice programs
 bindsym $mod+d exec $shh j4-dmenu-desktop
-bindsym $win+n exec networkmanager_dmenu
-bindsym $win+f exec firefox
-bindsym $win+o exec okular
-bindsym $win+t exec /home/isaac/Downloads/Telegram/Telegram
-bindsym $win+s exec steam-native
+bindsym $win+n exec $shh networkmanager_dmenu
+bindsym $win+f exec $shh firefox
+bindsym $win+o exec $shh okular
+bindsym $win+t exec $shh /home/isaac/Downloads/Telegram/Telegram
+bindsym $win+s exec $shh steam-native
+bindsym $win+q exec $shh qtox
+bindsym $win+l exec $shh slack
 
 # change focus
 bindsym $mod+j focus left

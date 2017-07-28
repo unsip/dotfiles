@@ -13,6 +13,8 @@ set foldmethod=marker
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
+"let g:python_host_prog = ''
+"let g:python3_host_prog = ''
 
 " Deoplete tern
 let g:tern_request_timeout = 1
