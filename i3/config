@@ -10,6 +10,8 @@ set $shh --no-startup-id
 exec $shh compton -bcf -i 0.7
 exec $shh feh --bg-fill ~/img/3.jpg 
 exec $shh pa-applet
+exec $shh unclutter
+exec $shh redshift
 
 ###############
 #    Binds    #
@@ -30,11 +32,11 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec $shh j4-dmenu-desktop
 bindsym $win+n exec $shh networkmanager_dmenu
 bindsym $win+f exec $shh firefox
-bindsym $win+o exec $shh okular
-bindsym $win+t exec $shh /home/isaac/Downloads/Telegram/Telegram
+bindsym $win+t exec $shh /home/unsip/Downloads/Telegram/Telegram
 bindsym $win+s exec $shh steam-native
 bindsym $win+q exec $shh qtox
 bindsym $win+l exec $shh slack
+bindsym $win+z exec $shh zathura 
 
 # change focus
 bindsym $mod+j focus left

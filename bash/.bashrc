@@ -8,8 +8,13 @@
 
 export EDITOR=nvim
 
-alias flux='xflux -l 59.9 -g 30.3'
 alias pytest='[[ -n ${VIRTUAL_ENV} ]] && python -m pytest || pytest'
+
+# User NPM packages
+NPM_PACKAGES="${HOME}/.npm-packages"
+PATH="$NPM_PACKAGES/bin:$PATH"
+unset MANPATH 
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # Setup history
 HISTCONTROL=ignoredups:erasedups
