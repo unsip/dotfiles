@@ -159,10 +159,10 @@ hide_edge_borders   smart
 set $bg     #2f343f
 set $fg     #404552
 set $hi     #fce94f
-set $ac     #4084d6
+set $ac     #81c181
 set $tx     #2d323d
 set $ia     #9e9e9e
-set $be     #8faf9f
+set $be     #81c181
 set $yw     #f8f893
 set $gn     #81c181
 set $rd     #bf9b76

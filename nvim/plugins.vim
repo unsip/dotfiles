@@ -12,4 +12,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mxw/vim-jsx'
+Plug 'ap/vim-css-color'
 call plug#end()
