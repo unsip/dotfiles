@@ -30,3 +30,6 @@ let g:tern#filetypes = [
 
 " Autoclose completion window
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" Highlight JSX in .js files
+let g:jsx_ext_required = 0
