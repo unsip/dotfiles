@@ -9,6 +9,7 @@
 export EDITOR=nvim
 
 alias pytest='[[ -n ${VIRTUAL_ENV} ]] && python -m pytest || pytest'
+alias today='task project:Today'
 
 # User NPM packages
 NPM_PACKAGES="${HOME}/.npm-packages"

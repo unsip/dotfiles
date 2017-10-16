@@ -7,7 +7,7 @@ set $win Mod4
 set $shh --no-startup-id
 
 # autostart
-exec $shh compton -bcf -i 0.7
+exec $shh compton -bcf -i 0.7 --xrender-sync --xrender-sync-fence
 exec $shh feh --bg-fill ~/img/3.jpg 
 exec $shh pa-applet
 exec $shh unclutter
@@ -33,8 +33,7 @@ bindsym $mod+d exec $shh j4-dmenu-desktop
 bindsym $win+n exec $shh networkmanager_dmenu
 bindsym $win+f exec $shh firefox
 bindsym $win+t exec $shh /home/unsip/Downloads/Telegram/Telegram
-bindsym $win+s exec $shh steam-native
-bindsym $win+q exec $shh qtox
+bindsym $win+s exec $shh firejail steam-native
 bindsym $win+l exec $shh slack
 bindsym $win+z exec $shh zathura 
 
