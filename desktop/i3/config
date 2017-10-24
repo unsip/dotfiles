@@ -8,7 +8,7 @@ set $shh --no-startup-id
 
 # autostart
 exec $shh $XDG_CONFIG_HOME/polybar/launch.sh
-exec $shh compton -bcf -i 0.7 --xrender-sync --xrender-sync-fence
+exec $shh compton -bcf --xrender-sync --xrender-sync-fence
 exec $shh feh --bg-fill ~/Pictures/wallpappers/3.jpg 
 exec $shh unclutter
 exec $shh redshift
