@@ -15,11 +15,13 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Snippets
 Plug 'jiangmiao/auto-pairs'
+Plug 'editorconfig/editorconfig-vim'
 
 " Linting
 Plug 'vim-syntastic/syntastic'
 
 " Highlight
+Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
