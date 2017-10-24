@@ -23,8 +23,5 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-# Hide mouse
-unclutter &
-
 # i3 with log output
 exec i3 -V >> ~/.log/i3/i3log-$(date +'%F-%k-%M-%S') 2>&1

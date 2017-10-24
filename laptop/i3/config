@@ -7,9 +7,9 @@ set $win Mod4
 set $shh --no-startup-id
 
 # autostart
+exec $shh $XDG_CONFIG_HOME/polybar/launch.sh
 exec $shh compton -bcf -i 0.7 --xrender-sync --xrender-sync-fence
-exec $shh feh --bg-fill ~/img/3.jpg 
-exec $shh pa-applet
+exec $shh feh --bg-fill ~/img/3.jpg
 exec $shh unclutter
 exec $shh redshift
 
@@ -18,9 +18,9 @@ exec $shh redshift
 ###############
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec $shh pactl -- set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec $shh pactl -- set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec $shh pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec $shh amixer -q set Master 3%+ unmute
+bindsym XF86AudioLowerVolume exec $shh amixer -q set Master 3%- unmute
+bindsym XF86AudioMute exec $shh amixer -q set Master toggle
 
 # Drag floating windows w/ mouse
 floating_modifier $mod
@@ -35,7 +35,7 @@ bindsym $win+f exec $shh firefox
 bindsym $win+t exec $shh /home/unsip/Downloads/Telegram/Telegram
 bindsym $win+s exec $shh firejail steam-native
 bindsym $win+l exec $shh slack
-bindsym $win+z exec $shh zathura 
+bindsym $win+z exec $shh zathura
 
 # change focus
 bindsym $mod+j focus left
@@ -177,10 +177,6 @@ client.urgent               $ac     $ac         $tx     $id
 #border & indicator are ignored
 client.placeholder          $bg     $bg         $bg     $bg
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
-        position top
-        status_command i3status --config $XDG_CONFIG_HOME/i3/i3status.conf 
-        separator_symbol ":|:"
+    i3bar_command $XDG_CONFIG_HOME/polybar/launch.sh
 }
