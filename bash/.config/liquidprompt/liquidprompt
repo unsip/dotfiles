@@ -124,8 +124,8 @@ elif test -n "${ZSH_VERSION-}" ; then
     # may have changed
     {
         add-zsh-hook -d precmd  _lp_set_prompt
-        add-zsh-hook -d preexec _lp_runtime_before
-        add-zsh-hook -d precmd  _lp_runtime_after
+#        add-zsh-hook -d preexec _lp_runtime_before
+#        add-zsh-hook -d precmd  _lp_runtime_after
     } >/dev/null
 else
     echo "liquidprompt: shell not supported" >&2
@@ -1402,63 +1402,63 @@ _lp_color_map() {
 ###########################
 # runtime of last command #
 ###########################
-
-_LP_RUNTIME_LAST_SECONDS=$SECONDS
-
-_lp_runtime()
-{
-    if (( LP_ENABLE_RUNTIME && _LP_RUNTIME_SECONDS >= LP_RUNTIME_THRESHOLD ))
-    then
-        echo -nE "${LP_COLOR_RUNTIME}"
-        # display runtime seconds as days, hours, minutes, and seconds
-        (( _LP_RUNTIME_SECONDS >= 86400 )) && echo -n $((_LP_RUNTIME_SECONDS / 86400))d
-        (( _LP_RUNTIME_SECONDS >= 3600 )) && echo -n $((_LP_RUNTIME_SECONDS % 86400 / 3600))h
-        (( _LP_RUNTIME_SECONDS >= 60 )) && echo -n $((_LP_RUNTIME_SECONDS % 3600 / 60))m
-        echo -n $((_LP_RUNTIME_SECONDS % 60))"s${NO_COL}"
-    fi
-    :
-}
-
-if (( LP_ENABLE_RUNTIME )); then
-    if $_LP_SHELL_zsh; then
-        _lp_runtime_before() {
-          _LP_RUNTIME_LAST_SECONDS=$SECONDS
-        }
-        _lp_runtime_after() {
-            if [[ -n "$_LP_RUNTIME_LAST_SECONDS" ]]; then
-                (( _LP_RUNTIME_SECONDS=SECONDS-_LP_RUNTIME_LAST_SECONDS ))
-                unset _LP_RUNTIME_LAST_SECONDS
-            fi
-        }
-
-        add-zsh-hook preexec _lp_runtime_before
-        add-zsh-hook precmd  _lp_runtime_after
-    else
-        _lp_runtime_before()
-        {
-            # For debugging
-            #echo "XXX $BASH_COMMAND"
-
-            # If the previous command was just the refresh of the prompt,
-            # reset the counter
-            if (( _LP_RUNTIME_SKIP )); then
-                _LP_RUNTIME_SECONDS=-1 _LP_RUNTIME_LAST_SECONDS=$SECONDS
-            else
-                # Compute number of seconds since program was started
-                (( _LP_RUNTIME_SECONDS=SECONDS-_LP_RUNTIME_LAST_SECONDS ))
-            fi
-
-            # If the command to run is the prompt, we'll have to ignore it
-            [[ "$BASH_COMMAND" != "$PROMPT_COMMAND" ]]
-            _LP_RUNTIME_SKIP=$?
-        }
-
-        _LP_RUNTIME_SKIP=0
-        # _lp_runtime_before gets called just before bash executes a command,
-        # including $PROMPT_COMMAND
-        trap _lp_runtime_before DEBUG
-    fi
-fi
+# 
+# _LP_RUNTIME_LAST_SECONDS=$SECONDS
+# 
+# _lp_runtime()
+# {
+#     if (( LP_ENABLE_RUNTIME && _LP_RUNTIME_SECONDS >= LP_RUNTIME_THRESHOLD ))
+#     then
+#         echo -nE "${LP_COLOR_RUNTIME}"
+#         # display runtime seconds as days, hours, minutes, and seconds
+#         (( _LP_RUNTIME_SECONDS >= 86400 )) && echo -n $((_LP_RUNTIME_SECONDS / 86400))d
+#         (( _LP_RUNTIME_SECONDS >= 3600 )) && echo -n $((_LP_RUNTIME_SECONDS % 86400 / 3600))h
+#         (( _LP_RUNTIME_SECONDS >= 60 )) && echo -n $((_LP_RUNTIME_SECONDS % 3600 / 60))m
+#         echo -n $((_LP_RUNTIME_SECONDS % 60))"s${NO_COL}"
+#     fi
+#     :
+# }
+# 
+# if (( LP_ENABLE_RUNTIME )); then
+#     if $_LP_SHELL_zsh; then
+#         _lp_runtime_before() {
+#           _LP_RUNTIME_LAST_SECONDS=$SECONDS
+#         }
+#         _lp_runtime_after() {
+#             if [[ -n "$_LP_RUNTIME_LAST_SECONDS" ]]; then
+#                 (( _LP_RUNTIME_SECONDS=SECONDS-_LP_RUNTIME_LAST_SECONDS ))
+#                 unset _LP_RUNTIME_LAST_SECONDS
+#             fi
+#         }
+# 
+#         add-zsh-hook preexec _lp_runtime_before
+#         add-zsh-hook precmd  _lp_runtime_after
+#     else
+#         _lp_runtime_before()
+#         {
+#             # For debugging
+#             #echo "XXX $BASH_COMMAND"
+# 
+#             # If the previous command was just the refresh of the prompt,
+#             # reset the counter
+#             if (( _LP_RUNTIME_SKIP )); then
+#                 _LP_RUNTIME_SECONDS=-1 _LP_RUNTIME_LAST_SECONDS=$SECONDS
+#             else
+#                 # Compute number of seconds since program was started
+#                 (( _LP_RUNTIME_SECONDS=SECONDS-_LP_RUNTIME_LAST_SECONDS ))
+#             fi
+# 
+#             # If the command to run is the prompt, we'll have to ignore it
+#             [[ "$BASH_COMMAND" != "$PROMPT_COMMAND" ]]
+#             _LP_RUNTIME_SKIP=$?
+#         }
+# 
+#         _LP_RUNTIME_SKIP=0
+#         # _lp_runtime_before gets called just before bash executes a command,
+#         # including $PROMPT_COMMAND
+#         trap _lp_runtime_before DEBUG
+#     fi
+# fi
 
 ###############
 # System load #
@@ -1747,7 +1747,7 @@ _lp_set_prompt()
         LP_SCLS=
     fi
 
-    LP_RUNTIME=$(_lp_sl "$(_lp_runtime)")
+#   LP_RUNTIME=$(_lp_sl "$(_lp_runtime)")
 
     # if change of working directory
     if [[ "${LP_OLD_PWD-}" != "LP:$PWD" ]]; then
