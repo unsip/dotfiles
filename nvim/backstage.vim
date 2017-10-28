@@ -12,6 +12,9 @@ set shiftwidth=4
 set softtabstop=4
 set textwidth=79
 
+" Colors
+let g:airline_theme='vice'
+
 " Highlight
 let g:jsx_ext_required = 0
 

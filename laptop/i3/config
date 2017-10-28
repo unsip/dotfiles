@@ -150,15 +150,15 @@ bindsym $mod+r mode "resize"
 ##############
 
 font pango:consolas 9
-new_window          pixel 0
+new_window          pixel 3
 new_float           pixel 3
 hide_edge_borders   smart
 
 # colorscheme
-set $bg     #2f343f
-set $fg     #404552
+set $bg     #000000
+set $fg     #7d7d7d
 set $hi     #fce94f
-set $ac     #81c181
+set $ac     #8dabcd
 set $tx     #2d323d
 set $ia     #9e9e9e
 set $be     #81c181
