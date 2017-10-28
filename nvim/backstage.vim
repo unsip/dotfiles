@@ -12,10 +12,7 @@ set shiftwidth=4
 set softtabstop=4
 set textwidth=79
 
-" Colors
-let g:airline_theme='raven'
-
-" Highlight
+" Highlight JSX
 let g:jsx_ext_required = 0
 
 " Deoplete tern
@@ -53,7 +50,12 @@ let g:syntastic_js_checkers = ['eslint', 'jsxhint']
 let g:syntastic_jsx_checkers = ['eslint', 'jsxhint']
 
 " Airline
+let g:airline_theme='raven'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_right_sep = ' '
+let g:airline_right_alt_sep = ' | '
+
+let g:airline_powerline_fonts = 1
 let g:airline_exclude_preview = 0
