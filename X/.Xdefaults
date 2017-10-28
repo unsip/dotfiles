@@ -1,5 +1,7 @@
-URxvt.font: xft:consolas:size=12
+URxvt.font: xft:consolas:bold:size=12
 URxvt.boldFont: xft:consolas:bold:size=12
+URxvt.background: [95]#131416
+URxvt.depth: 32
 
 URxvt.letterSpace: 0
 URxvt.lineSpace: -1
@@ -19,7 +21,7 @@ URxvt.iso14755:             false
 URxvt.iso14755_52:          false
 
 ! color scheme:
-*background:                #000000
+*background:                #131416
 *foreground:                #7d7d7d
 
 *colorUL:                   #8dabcd

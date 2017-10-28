@@ -13,7 +13,7 @@ set softtabstop=4
 set textwidth=79
 
 " Colors
-let g:airline_theme='vice'
+let g:airline_theme='raven'
 
 " Highlight
 let g:jsx_ext_required = 0

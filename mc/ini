@@ -110,7 +110,7 @@ clipboard_store=
 clipboard_paste=
 
 [Colors]
-base_color=
+base_color=#131416
 screen=
 color_terminals=
 
