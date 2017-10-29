@@ -12,6 +12,10 @@ set shiftwidth=4
 set softtabstop=4
 set textwidth=79
 
+" Colorscheme
+set background=dark
+colorscheme peachpuff
+
 " Highlight JSX
 let g:jsx_ext_required = 0
 
