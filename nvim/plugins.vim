@@ -25,4 +25,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+
+" Colorscheme
+Plug 'w0ng/vim-hybrid'
 call plug#end()
