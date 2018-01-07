@@ -32,7 +32,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec $shh j4-dmenu-desktop
 bindsym $win+n exec $shh networkmanager_dmenu
 bindsym $win+f exec $shh firefox
-bindsym $win+t exec $shh /home/unsip/Downloads/Telegram/Telegram
+# bindsym $win+t exec $shh telegram-desktop
 bindsym $win+s exec $shh firejail steam-native
 bindsym $win+l exec $shh slack
 bindsym $win+z exec $shh zathura
