@@ -26,7 +26,7 @@ bindsym $mod+Shift+q kill
 # Some nice programs
 bindsym $mod+d exec $shh j4-dmenu-desktop
 bindsym $win+f exec $shh firejail firefox
-bindsym $win+t exec $shh telegram-desktop
+# bindsym $win+t exec $shh telegram-desktop
 bindsym $win+l exec $shh slack
 bindsym $win+z exec $shh zathura
 

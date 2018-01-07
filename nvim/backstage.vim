@@ -19,9 +19,11 @@ colorscheme peachpuff
 " Highlight JSX
 let g:jsx_ext_required = 0
 
+
 " Deoplete tern
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
+let g:python3_host_prog = '/usr/bin/python'
 
 let g:tern_request_timeout = 1
 let g:tern_show_signature_in_pum = '0'
