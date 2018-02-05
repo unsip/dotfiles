@@ -40,20 +40,20 @@ let g:tern#filetypes = [
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_css_checkers = ['csslint']
-let g:syntastic_html_checkers = ['eslint']
-let g:syntastic_js_checkers = ['eslint', 'jsxhint']
-let g:syntastic_jsx_checkers = ['eslint', 'jsxhint']
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"
+"let g:syntastic_python_checkers = ['pylint']
+"let g:syntastic_css_checkers = ['csslint']
+"let g:syntastic_html_checkers = ['eslint']
+"let g:syntastic_js_checkers = ['eslint', 'jsxhint']
+"let g:syntastic_jsx_checkers = ['eslint', 'jsxhint']
 
 " Airline
 let g:airline_theme='raven'
