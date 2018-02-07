@@ -12,12 +12,12 @@ alias today='task project:Today'
 
 # User NPM packages
 NPM_PACKAGES="${HOME}/.npm-packages"
-PATH="$NPM_PACKAGES/bin:$PATH"
+PATH="$NPM_PACKAGES/bin:/sbin:$PATH"
 unset MANPATH 
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # Virtualenvwrapper
-source /usr/bin/virtualenvwrapper.sh
+# source /usr/bin/virtualenvwrapper.sh
 
 # Setup history
 HISTCONTROL=ignoredups:erasedups
