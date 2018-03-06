@@ -18,7 +18,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
 
 " Linting
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 
 " Highlight
 Plug 'bronson/vim-trailing-whitespace'
