@@ -17,7 +17,7 @@ unset MANPATH
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # Virtualenvwrapper
-source /usr/bin/virtualenvwrapper.sh
+# source /usr/bin/virtualenvwrapper.sh
 
 # Setup history
 HISTCONTROL=ignoredups:erasedups
