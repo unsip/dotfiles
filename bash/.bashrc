@@ -2,6 +2,8 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+# Load environment
 [[ $- = *i* ]] && source ~/.config/liquidprompt/liquidprompt
 [ -f /etc/profile ] && source /etc/profile
 
@@ -11,7 +13,7 @@ export WORK_DIR="/storage/work"
 
 # User NPM packages
 NPM_PACKAGES="${HOME}/.npm-packages"
-PATH="$NPM_PACKAGES/bin:/sbin:$PATH"
+PATH="$NPM_PACKAGES/bin:/sbin:/usr/sbin:$PATH"
 unset MANPATH
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
@@ -27,3 +29,6 @@ HISTCONTROL=ignoredups:erasedups
 HISTSIZE=100000
 HISTFILESIZE=1000000
 HISTIGNORE="&:[ ]*:exit:ls:ll:pwd:mc:su:df:du:clear:reset:fg:bg:ipython"
+
+# Wine path
+export WINEPREFIX="/storage/games/wine/"
