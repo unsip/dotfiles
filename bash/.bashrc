@@ -29,3 +29,6 @@ HISTCONTROL=ignoredups:erasedups
 HISTSIZE=100000
 HISTFILESIZE=1000000
 HISTIGNORE="&:[ ]*:exit:ls:ll:pwd:mc:su:df:du:clear:reset:fg:bg:ipython"
+
+# Wine path
+export WINEPREFIX="/storage/games/wine/"
