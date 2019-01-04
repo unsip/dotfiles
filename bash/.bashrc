@@ -26,6 +26,7 @@ fi
 
 # Aliases
 alias changettl="echo 65 | sudo tee /proc/sys/net/ipv4/ip_default_ttl"
+alias vim="nvim"
 
 # Setup history
 HISTCONTROL=ignoredups:erasedups

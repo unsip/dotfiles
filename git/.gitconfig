@@ -1,10 +1,12 @@
 [user]
     name = unsip
-    email = unsip@protonmail.com 
+    email = unsip@protonmail.com
 
 [core]
     editor = nvim
 
 [alias]
-    tree = log --graph --decorate --pretty=oneline --abbrev-commit   
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
     st = status
+    br = branch
+    cl = clone
