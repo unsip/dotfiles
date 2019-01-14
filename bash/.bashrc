@@ -37,3 +37,6 @@ HISTIGNORE="&:[ ]*:exit:ls:ll:pwd:mc:su:df:du:clear:reset:fg:bg:ipython"
 # Wine path
 export WINEARCH="win32"
 export WINEPREFIX="/storage/games/wine32/"
+
+# Steam
+#STEAM_RUNTIME="~/.steam"
