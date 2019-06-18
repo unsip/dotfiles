@@ -20,8 +20,8 @@ Plug 'editorconfig/editorconfig-vim'
 " Highlight
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'sheerun/vim-polyglot'
+Plug 'sophacles/vim-processing'
 
 " Colorscheme
 Plug 'joshdick/onedark.vim'

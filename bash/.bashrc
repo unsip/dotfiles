@@ -13,7 +13,8 @@ export WORK_DIR="/storage/work"
 
 # User NPM packages
 NPM_PACKAGES="${HOME}/.npm-packages"
-PATH="$NPM_PACKAGES/bin:/sbin:/usr/sbin:$PATH"
+PROCESSING="${HOME}/Downloads/processing-3.5.3"
+PATH="$PROCESSING:$NPM_PACKAGES/bin:/sbin:/usr/sbin:$PATH"
 unset MANPATH
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
