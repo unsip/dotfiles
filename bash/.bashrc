@@ -3,6 +3,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Disable temp for liquidprompt
+LP_ENABLE_TEMP=0
+
 # Load environment
 [[ $- = *i* ]] && source ~/.config/liquidprompt/liquidprompt
 [ -f /etc/profile ] && source /etc/profile
@@ -27,6 +30,7 @@ fi
 
 # Aliases
 alias changettl="echo 65 | sudo tee /proc/sys/net/ipv4/ip_default_ttl"
+alias fix_bl="sudo modprobe -r btusb && sudo modprobe btusb"
 alias vim="nvim"
 
 # Setup history
@@ -36,8 +40,9 @@ HISTFILESIZE=1000000
 HISTIGNORE="&:[ ]*:exit:ls:ll:pwd:mc:su:df:du:clear:reset:fg:bg:ipython"
 
 # Wine path
-export WINEARCH="win32"
-export WINEPREFIX="/storage/games/wine32/"
+export WINEARCH="win64"
+export WINEPREFIX="/home/unsip/.wine"
 
 # Steam
 #STEAM_RUNTIME="~/.steam"
+
