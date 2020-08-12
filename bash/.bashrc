@@ -45,4 +45,5 @@ export WINEPREFIX="/home/unsip/.wine"
 
 # Steam
 #STEAM_RUNTIME="~/.steam"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/lib"
 
