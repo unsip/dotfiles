@@ -82,23 +82,21 @@ editor_backup_extension=~
 editor_filesize_threshold=64M
 editor_stop_format_chars=-+*\\,.;:&>
 mcview_eof=
-skin=xoria256
-
-filepos_max_saved_entries=1024
+skin=nicedark
 
 [Layout]
+output_lines=0
+left_panel_size=78
+top_panel_size=0
 message_visible=true
 keybar_visible=true
 xterm_title=true
-output_lines=0
 command_prompt=true
 menubar_visible=true
 free_space=true
 horizontal_split=false
 vertical_equal=true
-left_panel_size=78
 horizontal_equal=true
-top_panel_size=1
 
 [Misc]
 timeformat_recent=%b %e %H:%M
@@ -113,12 +111,10 @@ clipboard_paste=
 
 [Colors]
 base_color=
-xterm-256color=
+screen=
 color_terminals=
 
-linux=
-
-screen=
+xterm-256color=
 
 [Panels]
 show_mini_info=true
@@ -140,11 +136,6 @@ permission_mode=false
 torben_fj_mode=false
 quick_search_mode=2
 select_flags=6
-
-simple_swap=false
-
-[HotlistConfig]
-expanded_view_of_groups=0
 
 [Panelize]
 Find *.orig after patching=find . -name \\*.orig -print

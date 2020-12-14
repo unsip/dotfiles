@@ -32,13 +32,5 @@ let g:python3_host_prog = '/usr/bin/python'
 let g:tern_request_timeout = 1
 let g:tern_show_signature_in_pum = '0'
 
-" Add extra filetypes
-let g:tern#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx',
-                \ 'vue',
-                \ '...'
-                \ ]
-
 " Autoclose completion window
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
