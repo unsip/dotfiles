@@ -13,6 +13,7 @@ export EDITOR=nvim
 alias changettl="echo 65 | sudo tee /proc/sys/net/ipv4/ip_default_ttl"
 alias fix_bl="sudo modprobe -r btusb && sudo modprobe btusb"
 alias vim="nvim"
+alias firefox="MOZ_ENABLE_WAYLAND=1 firefox"
 
 # Setup history
 HISTCONTROL=ignoredups:erasedups
