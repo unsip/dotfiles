@@ -1,16 +1,90 @@
 {
     "layer": "top",
+    "position": "top",
+    "height": 26,
+
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["battery", "clock"],
-    "sway/window": {
-        "max-length": 50
+    "modules-center": ["mpd"],
+    "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
     },
+
+    "mpd": {
+        "server": "localhost",
+        "port":  6600
+    },
+
+   "tray": {
+        "icon-size": 15,
+        "spacing": 20
+    },
+
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": " {icon} {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-icons": [
+            "", // Icon: battery-full
+            "", // Icon: battery-three-quarters
+            "", // Icon: battery-half
+            "", // Icon: battery-quarter
+            ""  // Icon: battery-empty
+        ],
+        "tooltip": true
     },
+
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        "format-wifi": "<span font='Font Awesome 5 Free 10'></span>  {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>",
+        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>",
+        "format-alt-click": "click-right",
+        "format-muted": "<span font='Font Awesome 5 Free 11'> </span>",
+        "format-icons": {
+            "phone": [" ", " ", " ", " "],
+            "default": ["", "", "", ""]
+        },
+        "scroll-step": 2,
+        "format-bluetooth": "{icon} {volume}%   {format_source}",
+        "format-bluetooth-muted": " {icon}   {format_source}",
+        "format-muted": "   {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+        "format": "{:%a %d %b - %H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip": false
     }
 }

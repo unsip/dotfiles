@@ -5,8 +5,8 @@
 call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 
 " Completion
-Plug 'Shougo/deoplete.nvim', { 'do' : 'UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi/'
+Plug 'Shougo/deoplete.nvim'
+Plug 'zchee/deoplete-jedi'
 
 " Navigation and interface
 Plug 'scrooloose/nerdtree'
@@ -19,8 +19,5 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
 Plug 'sheerun/vim-polyglot'
-
-" Colorscheme
-Plug 'joshdick/onedark.vim'
 
 call plug#end()

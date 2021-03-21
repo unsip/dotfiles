@@ -10,17 +10,15 @@ set linebreak
 set number
 set shiftwidth=4
 set softtabstop=4
-set textwidth=79
+set textwidth=130
+set relativenumber
 
 " FileType plugin
 filetype plugin indent on
 
 " Colors
-set termguicolors
 syntax on
-set rtp+=~/.local/share/nvim/plugged/onedark.vim
-colorscheme onedark
-let g:lightline = { 'colorscheme': 'onedark' }
+colorscheme default
 
 " Highlight JSX
 let g:jsx_ext_required = 0
