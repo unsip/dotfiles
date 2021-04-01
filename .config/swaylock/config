@@ -1,0 +1,11 @@
+ignore-empty-password
+show-failed-attempts
+
+show-keyboard-layout
+
+image=/storage/images/wallpapers/4.jpg
+
+indicator-radius=100
+indicator-idle-visible
+
+font=Hack

@@ -9,8 +9,8 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-jedi'
 
 " Navigation and interface
-Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
+Plug 'mcchrish/nnn.vim'
 
 " Snippets
 Plug 'editorconfig/editorconfig-vim'

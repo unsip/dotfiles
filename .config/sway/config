@@ -8,14 +8,14 @@ set $down j
 set $up k
 set $right l
 
-set $wallpaper '/storage/images/wallpapers/3.jpg'
 set $term foot
 set $browser env GDK_BACKEND=wayland firefox
 set $sleep swayidle -w \
 	timeout 1 'swaymsg "output * dpms off"' \
-	timeout 2 "swaylock -f -i $wallpaper" \
+	timeout 2 "swaylock -f" \
 	resume 'swaymsg "output * dpms on"; pkill -nx swayidle' \
-	before-sleep "swaylock -f -i $wallpaper"
+	before-sleep "swaylock -f"
+set $poweroff wlogout -c 5 -r 5 -b 2 -p layer-shell | xargs swaymsg exec --
 set $menu wofi --show drun,run -show-icons | xargs swaymsg exec --
 
 # -------------------
@@ -37,15 +37,15 @@ exec waybar
 # Shutdown displays when idle
 exec_always swayidle -w \
 	timeout 600 'swaymsg "output * dpms off"' \
-	timeout 630 'swaylock -f -c 3f6375' \
+	timeout 630 'swaylock -f' \
 	resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c 3f6375'
+	before-sleep 'swaylock -f'
 
 
 # ====================
 # Output configuration
 # ====================
-exec swaybg -i $wallpaper -m fill
+exec swaybg -i '/storage/images/wallpapers/3.jpg' -m fill
 
 # ===================
 # Input configuration
@@ -107,7 +107,8 @@ client.background       #111111
     # System-management
     # -----------------
     bindsym $mod+Shift+c reload
-    bindsym $mod+Shift+x exec $sleep
+    bindsym $mod+Ctrl+l exec $sleep
+    bindsym $mod+Ctrl+p exec $poweroff
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
