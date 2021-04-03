@@ -21,18 +21,12 @@ set $menu wofi --show drun,run -show-icons | xargs swaymsg exec --
 # -------------------
 # Start up some stuff
 # -------------------
-set $laptop eDP-1
-bindswitch --reload --locked lid:on output $laptop disable
-bindswitch --reload --locked lid:off output $laptop enable
-
-# Start notification daemon with specific styles
-exec mako --max-visible 10 --width 350 --border-color=#00ff00 --background-color=#000000 --default-timeout 6000
-
-# Start clipboard manager
-exec wl-paste -t text --watch clipman store 1>> ~/.local/log/clipman.log 2>&1 &
-
-# Bar
+exec mako
 exec waybar
+exec kanshi
+
+# Clipboard manager
+exec wl-paste -t text --watch clipman store 1>> ~/.local/log/clipman.log 2>&1 &
 
 # Shutdown displays when idle
 exec_always swayidle -w \
