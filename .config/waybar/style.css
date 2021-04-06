@@ -1,0 +1,52 @@
+@define-color background #1b1e25;
+@define-color foreground #9eba86;
+@define-color black      #222222;
+@define-color yellow     #fabd2f;
+@define-color red        #fb4934;
+@define-color green      #7fac96;
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Hack", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: @foreground;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  margin: 0 4px;
+  background: transparent;
+  color: @foreground;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+#workspaces button.focused {
+  border-bottom: 4px solid @green;
+}
+
+#workspaces button.urgent {
+  border-bottom: 4px solid @yellow;
+}
+
+#mode {
+  background-color: @background;
+  border-top: 4px solid @background;
+  border-bottom: 4px solid @red;
+}
+
+#battery.charging {
+  border-bottom: 4px solid @green;
+}
+
+#battery, #network, #pulseaudio, #clock, #tray {
+  margin: 0 5px;
+  padding: 0 3px;
+}

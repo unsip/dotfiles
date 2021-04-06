@@ -19,12 +19,14 @@
 
     "mpd": {
         "server": "localhost",
-        "port":  6600
+        "port":  6600,
+        "format-disconnected": "⚠ Disconnected",
+        "format-stopped": ""
     },
 
    "tray": {
         "icon-size": 15,
-        "spacing": 20
+        "spacing": 5
     },
 
     "battery": {
@@ -49,14 +51,14 @@
         "format": "{icon}",
         "format-alt": "{ipaddr}/{cidr} {icon}",
         "format-alt-click": "click-right",
-        "format-wifi": "<span font='Font Awesome 5 Free 10'></span>  {essid} ({signalStrength}%)",
+        "format-wifi": "<span font='Font Awesome 5 Free 10'></span> {essid} ({signalStrength}%)",
         "format-ethernet": " {ifname}",
         "format-disconnected": "⚠ Disconnected",
         "tooltip": false
     },
 
     "pulseaudio": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>",
+        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
         "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>",
         "format-alt-click": "click-right",
         "format-muted": "<span font='Font Awesome 5 Free 11'> </span>",
