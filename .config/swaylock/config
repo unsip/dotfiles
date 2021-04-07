@@ -8,4 +8,11 @@ image=/storage/images/wallpapers/4.jpg
 indicator-radius=100
 indicator-idle-visible
 
+inside-color=222222
+key-hl-color=7fac96
+ring-color=bfebbf
+ring-clear-color=d0bf8f
+ring-ver-color=6ca0a3
+ring-wrong-color=cc9393
+
 font=Hack
