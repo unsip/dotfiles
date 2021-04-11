@@ -10,13 +10,18 @@ set $right l
 
 set $term foot
 set $browser env GDK_BACKEND=wayland firefox
-set $sleep swayidle -w \
+set $lock swayidle -w \
 	timeout 1 'swaymsg "output * dpms off"' \
 	timeout 2 "swaylock -f" \
 	resume 'swaymsg "output * dpms on"; pkill -nx swayidle' \
 	before-sleep "swaylock -f"
 set $poweroff wlogout -c 5 -r 5 -b 2 -p layer-shell | xargs swaymsg exec --
 set $menu wofi --show drun,run -show-icons | xargs swaymsg exec --
+
+
+set $get_focused swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name'
+set $screen_focused grim -o $($get_focused) - | swappy -f -
+set $screen_selected grim -g "$(slurp)" - | swappy -f -
 
 # -------------------
 # Start up some stuff
@@ -101,11 +106,10 @@ client.background       #111111
     # System-management
     # -----------------
     bindsym --to-code $mod+Shift+c reload
-    bindsym --to-code $mod+Ctrl+l exec $sleep
+    bindsym --to-code $mod+Ctrl+l exec $lock
     bindsym --to-code $mod+Ctrl+p exec $poweroff
     # Exit sway (logs you out of your Wayland session)
     bindsym --to-code $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-
 
     # -----
     # Sound
@@ -114,6 +118,11 @@ client.background       #111111
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
     bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
+    # -----------
+    # Screenshots
+    # -----------
+    bindsym Print exec $screen_focused
+    bindsym $mod+Print exec $screen_selected
 
     # -------------
     # Moving around
@@ -180,9 +189,6 @@ client.background       #111111
     # ----------
     # Scratchpad
     # ----------
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
-
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+minus move scratchpad
 
