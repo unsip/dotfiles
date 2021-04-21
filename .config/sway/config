@@ -23,12 +23,16 @@ set $get_focused swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name'
 set $screen_focused grim -o $($get_focused) - | swappy -f -
 set $screen_selected grim -g "$(slurp)" - | swappy -f -
 
+# Workaround for push-to-talk in Xorg apps. Should work in 1.6.
+#bindsym --whole-window --release BTN_EXTRA exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
 # -------------------
 # Start up some stuff
 # -------------------
 exec mako
 exec waybar
 exec kanshi
+exec qbittorrent
 
 # Clipboard manager
 exec wl-paste -t text --watch clipman store 1>> ~/.local/log/clipman.log 2>&1 &
