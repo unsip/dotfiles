@@ -19,5 +19,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
 Plug 'sheerun/vim-polyglot'
+Plug 'https://gitlab.exherbo.org/exherbo-misc/exheres-syntax.git'
 
 call plug#end()
