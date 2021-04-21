@@ -17,7 +17,7 @@ export XDG_CURRENT_DESKTOP="Unity"
 export PASSWORD_STORE_X_SELECTION="wl-copy"
 
 # Smart-prompt
-export INPUTRC="${XDG_CONFIG_HOME}/inputrc"
+#export INPUTRC="${XDG_CONFIG_HOME}/inputrc"
 export PROMPT_DIRTRIM="3"
 
 # nnn
