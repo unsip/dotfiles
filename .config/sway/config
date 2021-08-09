@@ -29,10 +29,11 @@ set $screen_selected grim -g "$(slurp)" - | swappy -f -
 # -------------------
 # Start up some stuff
 # -------------------
-exec mako
-exec waybar
 exec kanshi
+exec mako
 exec qbittorrent
+exec waybar
+exec wlsunset -l 59.5 -L 30.1
 
 # Clipboard manager
 exec wl-paste -t text --watch clipman store 1>> ~/.local/log/clipman.log 2>&1 &
@@ -120,7 +121,13 @@ client.background       #111111
     # -----
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
-    bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+    bindsym XF86AudioMute exec pactl set-sink-mute  $(pacmd list-sinks |awk '/* index:/{print $3}') toggle
+
+    # ----------
+    # Brightness
+    # ----------
+    #bindsym XF86MonBrightnessUp exec light -A 5
+    #bindsym XF86MonBrightnessDown exec light -U 5
 
     # -----------
     # Screenshots
