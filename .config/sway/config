@@ -31,7 +31,6 @@ set $screen_selected grim -g "$(slurp)" - | swappy -f -
 # -------------------
 exec kanshi
 exec mako
-exec qbittorrent
 exec waybar
 exec wlsunset -l 59.5 -L 30.1
 
