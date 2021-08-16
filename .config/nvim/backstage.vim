@@ -11,6 +11,7 @@ set shiftwidth=4
 set softtabstop=4
 set textwidth=130
 set relativenumber
+set hidden
 
 " FileType plugin
 filetype plugin indent on
