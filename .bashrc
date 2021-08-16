@@ -11,6 +11,10 @@ export GDK_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
 export CLUTTER_BACKEND=wayland
 
+# FF open links issue
+MOZ_ENABLE_WAYLAND=1
+MOZ_DBUS_REMOTE=1
+
 export EDITOR=nvim
 export PATH="${PATH}:/home/unsip/.local/bin"
 # Required for waybar tray.
