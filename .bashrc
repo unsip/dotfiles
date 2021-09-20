@@ -17,6 +17,8 @@ MOZ_DBUS_REMOTE=1
 
 export EDITOR=nvim
 export PATH="${PATH}:/home/unsip/.local/bin"
+
+QT_QPA_PLATFORMTHEME="qt5ct"
 # Required for waybar tray.
 export XDG_CURRENT_DESKTOP="Unity"
 export PASSWORD_STORE_X_SELECTION="wl-copy"
