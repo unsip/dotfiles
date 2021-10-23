@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/storage/exherbo/exnihil/packages/wayland-apps/foot'
+let g:netrw_dirhist_6='/storage/exherbo/exnihil/packages/wayland-apps'
+let g:netrw_dirhist_5='/storage/exherbo/exnihil/packages'
+let g:netrw_dirhist_4='/storage/exherbo/exnihil/packages/media-libs'
+let g:netrw_dirhist_3='/storage/exherbo/exnihil/packages/media-libs/fcft'
+let g:netrw_dirhist_2='/home/unsip/.config/gtk-3.0'
+let g:netrw_dirhist_1='/home/unsip/.config/sway'

@@ -24,13 +24,13 @@ colorscheme default
 let g:deoplete#enable_at_startup = 1
 let g:python3_host_prog = '/usr/bin/python'
 
-" nnn integration
-let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Debug' } }
-let g:nnn#command = 'nnn -defFDHRU'
-let g:nnn#action = {
-      \ '<c-t>': 'tab split',
-      \ '<c-s>': 'split',
-      \ '<c-v>': 'vsplit' }
-
 " Autoclose completion window
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+let g:floaterm_opener = 'edit'
+let g:floaterm_autoclose = 2
+let g:floaterm_title = ''
+let g:floaterm_width = 0.8
+let g:floaterm_height = 0.7
+
+hi FloatermBorder guibg=black guifg=white

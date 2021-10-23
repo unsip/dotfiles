@@ -10,7 +10,7 @@ Plug 'zchee/deoplete-jedi'
 
 " Navigation and interface
 Plug 'itchyny/lightline.vim'
-Plug 'mcchrish/nnn.vim'
+Plug 'voldikss/vim-floaterm'
 
 " Snippets
 Plug 'editorconfig/editorconfig-vim'
