@@ -6,3 +6,8 @@ profile multihead {
   output HDMI-A-1 enable
   output eDP-1 disable
 }
+
+profile multihead_dongle {
+  output DP-1 enable
+  output eDP-1 disable
+}
