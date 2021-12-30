@@ -7,11 +7,10 @@ set foldmethod=marker
 set hidden
 set laststatus=2
 set linebreak
+set relativenumber
 set shiftwidth=4
 set softtabstop=4
 set textwidth=130
-set relativenumber
-set hidden
 
 " FileType plugin
 filetype plugin indent on
@@ -20,8 +19,6 @@ filetype plugin indent on
 syntax on
 colorscheme default
 
-" Deoplete
-let g:deoplete#enable_at_startup = 1
 let g:python3_host_prog = '/usr/bin/python'
 
 " Autoclose completion window

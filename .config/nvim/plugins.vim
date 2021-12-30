@@ -5,8 +5,8 @@
 call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 
 " Completion
-Plug 'Shougo/deoplete.nvim'
-Plug 'zchee/deoplete-jedi'
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
 " Navigation and interface
 Plug 'itchyny/lightline.vim'
@@ -16,7 +16,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'editorconfig/editorconfig-vim'
 
 " Highlight
-Plug 'bronson/vim-trailing-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'ap/vim-css-color'
 Plug 'sheerun/vim-polyglot'
 Plug 'https://gitlab.exherbo.org/exherbo-misc/exheres-syntax.git'
