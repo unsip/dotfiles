@@ -3,3 +3,4 @@ data.location=~/.task
 
 # Color theme.
 include /usr/share/task/rc/solarized-dark-256.theme
+news.version=2.6.0
