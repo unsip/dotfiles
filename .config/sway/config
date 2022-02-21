@@ -12,9 +12,10 @@ set $term foot
 set $browser env GDK_BACKEND=wayland firefox
 set $lock swayidle -w \
 	timeout 1 'swaymsg "output * dpms off"' \
-	timeout 2 "swaylock -f" \
+	timeout 2 'swaylock -f' \
 	resume 'swaymsg "output * dpms on"; pkill -nx swayidle' \
-	before-sleep "swaylock -f"
+	before-sleep 'swaylock -f'\
+
 set $poweroff wlogout -c 5 -r 5 -b 2 -p layer-shell | xargs swaymsg exec --
 set $menu wofi --show drun,run -show-icons | xargs swaymsg exec --
 
@@ -32,17 +33,13 @@ set $screen_selected grim -g "$(slurp)" - | swappy -f -
 exec kanshi
 exec mako
 exec waybar
-exec wlsunset -l 59.5 -L 30.1 -t 2500
+exec wlsunset -l 59.5 -L 30.1 -t 3000
 
 # Clipboard manager
 exec wl-paste -t text --watch clipman store 1>> ~/.local/log/clipman.log 2>&1 &
 
 # Shutdown displays when idle
-exec_always swayidle -w \
-	timeout 600 'swaymsg "output * dpms off"' \
-	timeout 630 'swaylock -f' \
-	resume 'swaymsg "output * dpms on"; pkill -nx swayidle' \
-	before-sleep 'swaylock -f'
+#exec_always $lock
 
 
 # ====================
