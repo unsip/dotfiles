@@ -16,6 +16,7 @@ export NNN_BMS='w:~/work/;D:~/Downloads/;'
 
 # Aliases
 alias vpn='sudo openvpn --auth-user-pass --auth-retry interact --config'
+alias prodvpn='sudo openconnect --juniper sjc01-c01-ssl01.ringcentral.com'
 alias changettl="echo 65 | sudo tee /proc/sys/net/ipv4/ip_default_ttl"
 alias fix_bl="sudo modprobe -r btusb && sudo modprobe btusb"
 alias vi="nvim"
