@@ -1,7 +1,7 @@
 * {
-  font: "Hack" bold;
+  font: Iosevka;
   font-size: 16px;
-  font-family: monospace;
+  font-weight: bold;
   box-shadow: none;
 }
 
