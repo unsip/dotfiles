@@ -1,0 +1,9 @@
+vim9script
+
+import './prefix.vim'
+import './autosetup.vim'
+import './plugins.vim'
+import './post-plugins.vim'
+import './statusline.vim'
+import './keys.vim'
+import './au.vim'
