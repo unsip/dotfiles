@@ -33,7 +33,7 @@ set $screen_selected grim -g "$(slurp)" - | swappy -f -
 exec kanshi
 exec mako
 exec waybar
-exec wlsunset -l 59.5 -L 30.1 -t 3000
+exec wlsunset -l 41.8 -L 44.8 -t 3000
 
 # Clipboard manager
 exec wl-paste -t text --watch clipman store 1>> ~/.local/log/clipman.log 2>&1 &
