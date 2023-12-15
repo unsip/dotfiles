@@ -1,5 +1,6 @@
 # Files
-data.location=~/.task
+data.location=/storage/shared/taskwarrior
+hooks.location=/storage/shared/taskwarrior/hooks
 
 # Color theme.
 include /usr/share/task/rc/solarized-dark-256.theme
