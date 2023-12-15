@@ -2,6 +2,9 @@
 # General
 # =======
 
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY
+
 set $mod Mod1
 set $left h
 set $down j
@@ -11,9 +14,9 @@ set $right l
 set $term foot
 set $browser env GDK_BACKEND=wayland firefox
 set $lock swayidle -w \
-	timeout 1 'swaymsg "output * dpms off"' \
+	timeout 1 'swaymsg "output * power off"' \
 	timeout 2 'swaylock -f' \
-	resume 'swaymsg "output * dpms on"; pkill -nx swayidle' \
+	resume 'swaymsg "output * power on"; pkill -nx swayidle' \
 	before-sleep 'swaylock -f'\
 
 set $poweroff wlogout -c 5 -r 5 -b 2 -p layer-shell | xargs swaymsg exec --
@@ -122,8 +125,8 @@ client.background       #111111
     # ----------
     # Brightness
     # ----------
-    bindsym XF86MonBrightnessUp exec light -A 5
-    bindsym XF86MonBrightnessDown exec light -U 5
+    bindsym XF86MonBrightnessUp exec light -A 10
+    bindsym XF86MonBrightnessDown exec light -U 10
 
     # -----------
     # Screenshots
