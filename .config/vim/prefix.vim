@@ -35,4 +35,3 @@ set fillchars=eob:\ ,vert:\│,fold:\
 set listchars=tab:<->,trail:·
 set clipboard=unnamedplus
 set background=dark
-

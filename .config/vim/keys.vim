@@ -11,7 +11,7 @@ tmap <Leader><Leader> <C-v><Leader>
 
 # NORMAL MODE
 # Write
-nmap ww :w<CR>
+#nmap ww :w<CR>
 
 # NORMAL MODE
 # <C-w>
