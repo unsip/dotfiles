@@ -10,7 +10,7 @@ set linebreak
 set relativenumber
 set shiftwidth=4
 set softtabstop=4
-set textwidth=130
+set textwidth=120
 
 " FileType plugin
 filetype plugin indent on
@@ -20,9 +20,6 @@ syntax on
 colorscheme default
 
 let g:python3_host_prog = '/usr/bin/python'
-
-" Autoclose completion window
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 let g:floaterm_opener = 'edit'
 let g:floaterm_autoclose = 2

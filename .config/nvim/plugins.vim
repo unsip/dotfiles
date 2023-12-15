@@ -4,11 +4,8 @@
 
 call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 
-" Completion
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-
 " Navigation and interface
+Plug 'APZelos/blamer.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'voldikss/vim-floaterm'
 
