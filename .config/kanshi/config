@@ -3,12 +3,32 @@ profile freaky {
   output eDP-1 disable
 }
 
+profile serega {
+  output "Samsung Electric Company SAMSUNG Unknown" enable mode 1400x1050
+  output eDP-1 disable
+}
+
+profile vr {
+  output "Samsung Electric Company SAMSUNG 0x00000000" enable mode 1024x768
+  output eDP-1 disable
+}
+
+profile safe {
+  output "Vestel Elektronik Sanayi ve Ticaret A. S. 43FHD_LCD_TV 0x00000000" enable mode 1920x1080 scale 1.25
+  output eDP-1 disable
+}
+
+profile safe2 {
+  output "Vestel Elektronik Sanayi ve Ticaret A. S. 43FHD_LCD_TV 0x00000000" enable mode 1400x1050
+  output eDP-1 disable
+}
+
 profile nomad {
   output eDP-1 enable
 }
 
 profile multihead {
-  output HDMI-A-1 enable
+  output HDMI-A-1 enable mode 1680x1050
   output eDP-1 disable
 }
 
