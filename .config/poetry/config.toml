@@ -1,0 +1,2 @@
+[virtualenvs]
+prefer-core-over-own = true
