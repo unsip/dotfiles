@@ -1,3 +1,8 @@
+profile xiaomi {
+  output "Vestel Elektronik Sanayi ve Ticaret A. S. 43FHD_LCD_TV Unknown" enable mode 1920x1080
+  output eDP-1 disable
+}
+
 profile freaky {
   output "Unknown Beyond TV 0x00000100" enable scale 2
   output eDP-1 disable
@@ -28,7 +33,7 @@ profile nomad {
 }
 
 profile multihead {
-  output HDMI-A-1 enable mode 1680x1050
+  output HDMI-A-1 enable mode 1920x1080
   output eDP-1 disable
 }
 

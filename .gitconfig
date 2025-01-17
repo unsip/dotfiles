@@ -3,7 +3,7 @@
     email = unsip@tutamail.com
 
 [core]
-    editor = vim
+    editor = nvim
 
 [alias]
     br = branch

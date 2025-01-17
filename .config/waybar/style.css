@@ -1,5 +1,5 @@
-@define-color background #1b1e25;
-@define-color foreground #9eba86;
+@define-color background #111111;
+@define-color foreground #dcdccc;
 @define-color black      #222222;
 @define-color yellow     #fabd2f;
 @define-color red        #fb4934;
@@ -14,8 +14,9 @@
 }
 
 window#waybar {
-  background: transparent;
   color: @foreground;
+  background-color: @background;
+  opacity: 0.85;
 }
 
 #workspaces button {
