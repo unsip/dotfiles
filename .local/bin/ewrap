@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+if [ -z `kak -l | grep -e "${PPID}"` ] ; then
+    OPT="-s"
+else
+    OPT="-c"
+fi
+
+if [ -n "$TMUX" ] ; then
+    tmux split-window -h "kak ${OPT} n-${PPID} \"$*\""
+else
+    foot kak ${OPT} "n-${PPID}" $* > /dev/null 2>&1 &
+fi
