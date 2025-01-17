@@ -4,6 +4,7 @@ DOWNLOADS='D:/home/unsip/Downloads/;d:/storage/downloads/'
 export NNN_ARCHIVE='\\.(7z|bz2|gz|tar|zip|rar)$'
 export NNN_BMS="s:/storage/;b:/storage/books/;w:/storage/work/;${DOWNLOADS};${MULTIMEDIA}"
 export NNN_COLORS='2415'
-export NNN_PLUG='c:cdpath;f:finder;o:fzopen;d:fzcd;i:diffs;h:fzhist;s:suedit;y:-!ewrap'
+CD='pwd | foot > /dev/null 2>&1 && cd &'
+export NNN_PLUG="c:-!${CD}*;f:finder;o:fzopen;d:fzcd;i:diffs;h:fzhist;s:suedit"
 export VISUAL='ewrap'
 nnn -efHU
