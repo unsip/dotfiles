@@ -8,5 +8,5 @@ fi
 if [ -n "$TMUX" ] ; then
     tmux split-window -h "kak ${OPT} n-${PPID} \"$*\""
 else
-    foot kak ${OPT} "n-${PPID}" $* > /dev/null 2>&1 &
+    foot kak ${OPT} "n-${PPID}" "${*}" > /dev/null 2>&1 &
 fi

@@ -1,0 +1,38 @@
+# Load EditorConfig
+hook global BufOpenFile .* %{ editorconfig-load }
+hook global BufNewFile .* %{ editorconfig-load }
+
+# Options
+set-option global grepcmd 'rg --hidden'
+
+# Highlighters
+add-highlighter global/ number-lines -relative -separator ' ' -hlcursor
+add-highlighter global/ wrap -word
+add-highlighter global/ show-matching -previous
+add-highlighter global/ show-whitespaces -lf ' ' -only-trailing
+
+# Switch cursor color in insert mode
+set-face global InsertCursor default,green+B
+
+hook global ModeChange .*:.*:insert %{
+    set-face window PrimaryCursor InsertCursor
+    set-face window PrimaryCursorEol InsertCursor
+}
+
+hook global ModeChange .*:insert:.* %{ try %{
+    unset-face window PrimaryCursor
+    unset-face window PrimaryCursorEol
+}}
+
+# Mappings
+map global normal '#' :comment-line<ret> -docstring 'comment line'
+map global normal D xd -docstring 'delete line'
+
+# Tab completion
+hook global InsertCompletionShow .* %{ map window insert <tab> <c-n>; map window insert <s-tab> <c-p> }
+hook global InsertCompletionHide .* %{ unmap window insert <tab> <c-n>; unmap window insert <s-tab> <c-p> }
+
+# LSP
+# eval %sh{kak-lsp}
+# lsp-enable
+

@@ -33,7 +33,6 @@ export fl_dir='/home/unsip/.local/share/flatpak/exports/share'
 # Aliases
 alias changettl="echo 65 | sudo tee /proc/sys/net/ipv4/ip_default_ttl"
 alias fix_bl="sudo modprobe -r btusb && sudo modprobe btusb"
-#alias n="nnn -defHRU"
 
 alias kubectl="minikube kubectl --"
 

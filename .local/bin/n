@@ -1,6 +1,6 @@
 #/bin/sh
 MULTIMEDIA='m:/storage/multimedia/music/;M:/storage/multimedia/movies/'
-DOWNLOADS='D:/home/unsip/Downloads/;d:/storage/downloads/'
+DOWNLOADS='D:/home/unsip/Downloads/;d:/storage/documents/'
 export NNN_ARCHIVE='\\.(7z|bz2|gz|tar|zip|rar)$'
 export NNN_BMS="s:/storage/;b:/storage/books/;w:/storage/work/;${DOWNLOADS};${MULTIMEDIA}"
 export NNN_COLORS='2415'
