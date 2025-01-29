@@ -5,7 +5,7 @@
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY
 
-set $mod Mod1
+set $mod Mod4
 set $left h
 set $down j
 set $up k
@@ -63,7 +63,7 @@ input "type:touchpad" {
 
 input "type:keyboard" {
     xkb_layout us,ru
-    xkb_options grp:alt_caps_toggle
+    xkb_options grp:rshift_toggle,ctrl:swapcaps,altwin:swap_alt_win
 }
 
 # ===============
@@ -104,6 +104,7 @@ client.background       #111111
     # ------------
     bindsym --to-code $mod+Return     exec $term
     bindsym --to-code $mod+Shift+f    exec $browser
+    bindsym --to-code $mod+Shift+i    exec $term -T "ipython" ipython
     bindsym --to-code $mod+n          exec $term -T "nnn" n
     bindsym --to-code $mod+m          exec $term -T "rmpc" rmpc
 
