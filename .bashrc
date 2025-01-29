@@ -16,7 +16,7 @@ export XDG_SESSION_TYPE=wayland
 MOZ_ENABLE_WAYLAND=1
 MOZ_DBUS_REMOTE=1
 
-export EDITOR=nvim
+export EDITOR=kak
 export PATH="${PATH}:/home/unsip/.local/bin:/home/unsip/.cargo/bin:/home/unsip/go/bin"
 
 # Required for waybar tray.
@@ -35,6 +35,13 @@ alias changettl="echo 65 | sudo tee /proc/sys/net/ipv4/ip_default_ttl"
 alias fix_bl="sudo modprobe -r btusb && sudo modprobe btusb"
 
 alias kubectl="minikube kubectl --"
+alias venv='python -m venv'
+
+# Hatch
+alias hr='hatch run'
+alias hc='hatch env create'
+alias hp='hatch env prune'
+alias hs='hatch shell'
 
 # Docker
 alias ds='docker stop'
