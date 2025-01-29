@@ -1,9 +1,10 @@
 [user]
     name = unsip
-    email = unsip@tutamail.com
+    email = unsip@tuta.io
 
 [core]
-    editor = nvim
+    editor = kak
+    pager = bat
 
 [alias]
     br = branch
