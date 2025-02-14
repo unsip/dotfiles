@@ -12,7 +12,7 @@ set $up k
 set $right l
 
 set $term foot
-set $browser env GDK_BACKEND=wayland firefox
+set $browser env MOZ_ENABLE_WAYLAND=1 GDK_BACKEND=wayland firefox
 set $lock swayidle -w \
 	timeout 1 'swaymsg "output * power off"' \
 	timeout 2 'swaylock -f' \
@@ -120,9 +120,9 @@ client.background       #111111
     # -----
     # Sound
     # -----
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5%
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5%
-    bindsym XF86AudioMute exec pactl set-sink-mute  $(pacmd list-sinks |awk '/* index:/{print $3}') toggle
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pactl list short sinks | awk '{print $2}') +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pactl list short sinks | awk '{print $2}') -5%
+    bindsym XF86AudioMute exec pactl set-sink-mute  $(pactl list short sinks | awk '{print $2}') toggle
 
     # ----------
     # Brightness

@@ -59,8 +59,8 @@
     },
 
     "pulseaudio": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
-        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>",
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>{volume}%",
+        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon}</span>",
         "format-alt-click": "click-right",
         "format-muted": "<span font='Font Awesome 5 Free 11'> </span>",
         "format-icons": {

@@ -3,6 +3,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+set -o vi
+
 # Load environment
 [ -f /etc/profile ] && source /etc/profile
 
@@ -36,6 +38,7 @@ alias fix_bl="sudo modprobe -r btusb && sudo modprobe btusb"
 
 alias kubectl="minikube kubectl --"
 alias venv='python -m venv'
+alias vi='kak'
 
 # Hatch
 alias hr='hatch run'

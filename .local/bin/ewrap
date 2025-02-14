@@ -5,6 +5,8 @@ else
     OPT="-c"
 fi
 
+PATH="${PATH}:/home/unsip/.cargo/bin"
+
 if [ -n "$TMUX" ] ; then
     tmux split-window -h "kak ${OPT} n-${PPID} \"$*\""
 else
