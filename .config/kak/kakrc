@@ -2,11 +2,8 @@
 # Initialize kakoune config
 #
 
-# Options
-set-option global grepcmd 'rg --hidden'
-
 source "%val{config}/utils.kak"
 source "%val{config}/lsp.kak"
-source "%val{config}/formatting.kak"
+source "%val{config}/global.kak"
 source "%val{config}/visual.kak"
 source "%val{config}/mappings.kak"

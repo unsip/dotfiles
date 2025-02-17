@@ -1,6 +1,8 @@
 #
-# Formatting options
+# General global options and hooks
 #
+
+set-option global grepcmd 'rg --hidden'
 
 # Load EditorConfig and set smarttab
 hook global BufOpenFile .* %{ editorconfig-load; autoconfigtab }
