@@ -39,6 +39,7 @@ alias fix_bl="sudo modprobe -r btusb && sudo modprobe btusb"
 alias kubectl="minikube kubectl --"
 alias venv='python -m venv'
 alias vi='kak'
+alias k='kak'
 
 # Hatch
 alias hr='hatch run'
