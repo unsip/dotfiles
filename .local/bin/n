@@ -7,4 +7,4 @@ export NNN_COLORS='2415'
 CD='pwd | foot > /dev/null 2>&1 && cd &'
 export NNN_PLUG="c:-!${CD}*;f:finder;o:fzopen;d:fzcd;i:diffs;h:fzhist;s:suedit"
 export VISUAL='ewrap'
-nnn -efHU
+nnn -efHU $@
