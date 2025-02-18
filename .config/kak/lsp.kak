@@ -18,3 +18,15 @@ map global object D '<a-semicolon>lsp-diagnostic-object<ret>' -docstring 'LSP er
 map global user k ': lsp-hover<ret>' -docstring 'LSP hover'
 map global user a ': lsp-code-actions<ret>' -docstring 'LSP code actions'
 map global user r ': lsp-rename-prompt<ret>' -docstring 'LSP rename symbol'
+
+
+hook -group lsp-filetype-python global BufSetOption filetype=python %{
+    set-option -add buffer lsp_servers %{
+        [ruff]
+        root_globs = ["requirements.txt", "setup.py", "pyproject.toml", ".git", ".hg"]
+        settings_section = "_"
+        [ruff.settings._.globalSettings]
+        organizeImports = true
+        fixAll = true
+    }
+}
