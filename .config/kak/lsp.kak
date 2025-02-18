@@ -4,6 +4,7 @@
 
 eval %sh{kak-lsp}
 lsp-enable
+set-option global lsp_debug true
 
 map global user l ': enter-user-mode lsp<ret>' -docstring 'LSP mode'
 map global insert <c-l> '<a-;>:try lsp-snippets-select-next-placeholders catch %{}<ret>' -docstring 'Select next snippet placeholder'

@@ -19,3 +19,14 @@ hook global ModeChange .*:insert:.* %{ try %{
     unset-face window PrimaryCursor
     unset-face window PrimaryCursorEol
 }}
+
+# Tree-sitter colors
+eval %sh{ kak-tree-sitter -dks --init $kak_session }
+colorscheme night-owl
+
+set-face global Default default,default
+set-face global LineNumbers default,default
+set-face global BufferPadding default,default
+set-face global StatusLine default,default
+
+set-face global ts_variable default,default
