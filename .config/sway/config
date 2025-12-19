@@ -117,6 +117,13 @@ client.background       #111111
     # Exit sway (logs you out of your Wayland session)
     bindsym --to-code $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
+    # ----------
+    # Change TTY
+    # ----------
+    bindsym $mod+Shift+F2 exec sudo chvt 2
+    bindsym $mod+Shift+F3 exec sudo chvt 3
+    bindsym $mod+Shift+F4 exec sudo chvt 4
+
     # -----
     # Sound
     # -----
