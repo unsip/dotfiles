@@ -14,14 +14,13 @@ set $right l
 set $term foot
 set $browser env MOZ_ENABLE_WAYLAND=1 GDK_BACKEND=wayland firefox
 set $lock swayidle -w \
-	timeout 1 'swaymsg "output * power off"' \
-	timeout 2 'swaylock -f' \
-	resume 'swaymsg "output * power on"; pkill -nx swayidle' \
-	before-sleep 'swaylock -f'\
+    timeout 1 'swaymsg "output * power off"' \
+    timeout 2 'swaylock -f' \
+    resume 'swaymsg "output * power on"; pkill -nx swayidle' \
+    before-sleep 'swaylock -f'\
 
 set $poweroff wlogout -c 5 -r 5 -b 2 -p layer-shell | xargs swaymsg exec --
 set $menu wofi --show drun,run -show-icons | xargs swaymsg exec --
-
 
 set $get_focused swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name'
 set $screen_focused grim -o $($get_focused) - | swappy -f -
@@ -76,6 +75,11 @@ smart_borders no_gaps
 hide_edge_borders smart_no_gaps
 floating_modifier $mod normal
 
+# Minimalistic empty titlebars
+font pango:monospace 1
+for_window [title="."] title_format " "
+titlebar_border_thickness 2
+
 # -----------------------------
 # Application specific settings
 # -----------------------------
@@ -85,19 +89,19 @@ for_window [app_id="mpv"] inhibit_idle
 # Theme colors
 # ------------
 # class                 border  backgr. text    indic.  child_border
-client.focused          #5b8277 #7fac96 #151517 #9eba86 #5b8277
-client.focused_inactive #000000 #33333a #7fac96 #000000 #000000
-client.unfocused        #000000 #33333a #faf6e5 #000000 #000000
+client.focused          #5b8277 #7fac96 #222222 #9eba86 #5b8277
+client.focused_inactive #222222 #33333a #222222 #000000 #222222
+client.unfocused        #222222 #33333a #222222 #000000 #222222
 client.urgent           #cb4b16 #fdf6e3 #1abc9c #268bd2 #cb4b16
 client.placeholder      #ffffff #0c0c0c #ffffff #ffffff #3f6e90
 
-client.background       #111111
+client.background       #222222
 
 # ========
 # Bindings
 # ========
     bindsym --to-code $mod+Shift+q kill       # Kill focused window
-    bindsym --to-code $mod+d exec $menu       # Start your launcher
+    bindsym --to-code $mod+d exec $menu       # Start launcher
 
     # ------------
     # Applications
