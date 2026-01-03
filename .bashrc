@@ -40,6 +40,7 @@ alias kubectl="minikube kubectl --"
 alias venv='python -m venv'
 alias vi='kak'
 alias k='kak'
+alias b='bat'
 
 # Hatch
 alias hr='hatch run'
