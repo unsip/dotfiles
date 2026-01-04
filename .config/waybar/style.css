@@ -20,7 +20,7 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 2 5px;
+  padding: 0 5px;
   margin: 2 4px;
   background: transparent;
   color: @foreground;
