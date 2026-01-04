@@ -9,7 +9,7 @@
   border: none;
   border-radius: 0;
   font-family: "Iosevka", monospace;
-  font-size: 18px;
+  font-size: 16px;
   min-height: 0;
 }
 
@@ -20,8 +20,8 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 0 5px;
-  margin: 0 4px;
+  padding: 2 5px;
+  margin: 2 4px;
   background: transparent;
   color: @foreground;
   border-top: 4px solid transparent;
@@ -29,21 +29,21 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  border-bottom: 4px solid @green;
+  border-bottom: 2px solid @green;
 }
 
 #workspaces button.urgent {
-  border-bottom: 4px solid @yellow;
+  border-bottom: 2px solid @yellow;
 }
 
 #mode {
   background-color: @background;
   border-top: 4px solid @background;
-  border-bottom: 4px solid @red;
+  border-bottom: 2px solid @red;
 }
 
 #battery.charging {
-  border-bottom: 4px solid @green;
+  border-bottom: 2px solid @green;
 }
 
 #battery, #network, #pulseaudio, #clock, #tray {
